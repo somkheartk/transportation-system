@@ -8,7 +8,8 @@ import { UpdateWarehouseDto } from './dto/update-warehouse.dto';
 @Injectable()
 export class WarehousesService {
   constructor(
-    @InjectModel(Warehouse.name) private warehouseModel: Model<WarehouseDocument>,
+    @InjectModel(Warehouse.name)
+    private warehouseModel: Model<WarehouseDocument>,
   ) {}
 
   async create(createWarehouseDto: CreateWarehouseDto): Promise<Warehouse> {
@@ -29,10 +30,16 @@ export class WarehousesService {
   }
 
   async findActive(): Promise<Warehouse[]> {
-    return this.warehouseModel.find({ isActive: true }).sort({ name: 1 }).exec();
+    return this.warehouseModel
+      .find({ isActive: true })
+      .sort({ name: 1 })
+      .exec();
   }
 
-  async update(id: string, updateWarehouseDto: UpdateWarehouseDto): Promise<Warehouse> {
+  async update(
+    id: string,
+    updateWarehouseDto: UpdateWarehouseDto,
+  ): Promise<Warehouse> {
     const updatedWarehouse = await this.warehouseModel
       .findByIdAndUpdate(id, updateWarehouseDto, { new: true })
       .exec();

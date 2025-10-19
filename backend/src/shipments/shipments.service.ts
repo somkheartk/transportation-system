@@ -49,7 +49,10 @@ export class ShipmentsService {
     return shipment;
   }
 
-  async update(id: string, updateShipmentDto: UpdateShipmentDto): Promise<Shipment> {
+  async update(
+    id: string,
+    updateShipmentDto: UpdateShipmentDto,
+  ): Promise<Shipment> {
     const updatedShipment = await this.shipmentModel
       .findByIdAndUpdate(id, updateShipmentDto, { new: true })
       .populate('destinationWarehouse')
@@ -60,7 +63,10 @@ export class ShipmentsService {
     return updatedShipment;
   }
 
-  async updateTracking(id: string, updateTrackingDto: UpdateTrackingDto): Promise<Shipment> {
+  async updateTracking(
+    id: string,
+    updateTrackingDto: UpdateTrackingDto,
+  ): Promise<Shipment> {
     const shipment = await this.shipmentModel.findById(id);
     if (!shipment) {
       throw new NotFoundException(`Shipment with ID ${id} not found`);

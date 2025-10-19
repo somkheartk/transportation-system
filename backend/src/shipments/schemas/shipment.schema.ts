@@ -45,7 +45,11 @@ export class Shipment {
   @Prop({ required: true })
   quantity: number;
 
-  @Prop({ required: true, enum: ShipmentStatus, default: ShipmentStatus.PENDING })
+  @Prop({
+    required: true,
+    enum: ShipmentStatus,
+    default: ShipmentStatus.PENDING,
+  })
   status: ShipmentStatus;
 
   @Prop()

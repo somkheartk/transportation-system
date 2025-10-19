@@ -12,7 +12,10 @@ import { AuthModule } from './auth/auth.module';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/transportation-system'),
+    MongooseModule.forRoot(
+      process.env.MONGODB_URI ||
+        'mongodb://localhost:27017/transportation-system',
+    ),
     ShipmentsModule,
     WarehousesModule,
     AuthModule,

@@ -1,10 +1,10 @@
-import { 
-  Controller, 
-  Get, 
-  Post, 
-  Body, 
-  Patch, 
-  Param, 
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
   Delete,
   HttpCode,
   HttpStatus,
@@ -52,7 +52,10 @@ export class WarehousesController {
   @ApiOperation({ summary: 'Update warehouse' })
   @ApiResponse({ status: 200, description: 'Warehouse updated successfully' })
   @ApiResponse({ status: 404, description: 'Warehouse not found' })
-  update(@Param('id') id: string, @Body() updateWarehouseDto: UpdateWarehouseDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateWarehouseDto: UpdateWarehouseDto,
+  ) {
     return this.warehousesService.update(id, updateWarehouseDto);
   }
 

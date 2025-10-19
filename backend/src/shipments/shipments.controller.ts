@@ -1,10 +1,10 @@
-import { 
-  Controller, 
-  Get, 
-  Post, 
-  Body, 
-  Patch, 
-  Param, 
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
   Delete,
   HttpCode,
   HttpStatus,
@@ -54,7 +54,10 @@ export class ShipmentsController {
   @ApiOperation({ summary: 'Update shipment' })
   @ApiResponse({ status: 200, description: 'Shipment updated successfully' })
   @ApiResponse({ status: 404, description: 'Shipment not found' })
-  update(@Param('id') id: string, @Body() updateShipmentDto: UpdateShipmentDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateShipmentDto: UpdateShipmentDto,
+  ) {
     return this.shipmentsService.update(id, updateShipmentDto);
   }
 
@@ -62,7 +65,10 @@ export class ShipmentsController {
   @ApiOperation({ summary: 'Add tracking update to shipment' })
   @ApiResponse({ status: 200, description: 'Tracking updated successfully' })
   @ApiResponse({ status: 404, description: 'Shipment not found' })
-  updateTracking(@Param('id') id: string, @Body() updateTrackingDto: UpdateTrackingDto) {
+  updateTracking(
+    @Param('id') id: string,
+    @Body() updateTrackingDto: UpdateTrackingDto,
+  ) {
     return this.shipmentsService.updateTracking(id, updateTrackingDto);
   }
 

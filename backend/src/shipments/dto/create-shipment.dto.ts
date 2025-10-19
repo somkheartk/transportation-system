@@ -1,4 +1,11 @@
-import { IsString, IsNotEmpty, IsNumber, IsEnum, IsOptional, IsDateString } from 'class-validator';
+import {
+  IsString,
+  IsNotEmpty,
+  IsNumber,
+  IsEnum,
+  IsOptional,
+  IsDateString,
+} from 'class-validator';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { ShipmentStatus } from '../schemas/shipment.schema';
 
@@ -58,7 +65,10 @@ export class CreateShipmentDto {
   @IsNotEmpty()
   quantity: number;
 
-  @ApiPropertyOptional({ description: 'Status of the shipment', enum: ShipmentStatus })
+  @ApiPropertyOptional({
+    description: 'Status of the shipment',
+    enum: ShipmentStatus,
+  })
   @IsEnum(ShipmentStatus)
   @IsOptional()
   status?: ShipmentStatus;

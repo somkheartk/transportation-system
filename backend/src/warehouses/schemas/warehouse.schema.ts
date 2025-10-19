@@ -32,7 +32,11 @@ export class Warehouse {
   @Prop()
   email: string;
 
-  @Prop({ required: true, enum: WarehouseType, default: WarehouseType.WAREHOUSE })
+  @Prop({
+    required: true,
+    enum: WarehouseType,
+    default: WarehouseType.WAREHOUSE,
+  })
   type: WarehouseType;
 
   @Prop({ type: { lat: Number, lng: Number } })
