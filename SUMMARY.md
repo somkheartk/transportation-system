@@ -103,7 +103,7 @@ Warehouses:
    - Features list
    - Technology stack
    - Installation instructions (Docker & Manual)
-   - API documentation
+   - API documentation links
    - Database schema
    - Deployment guide
    - Bilingual (English/Thai)
@@ -115,14 +115,49 @@ Warehouses:
    - Quick reference
    - Troubleshooting
 
-3. **docs/API.md**
-   - Complete API reference
-   - All endpoints documented
-   - Request/response examples
-   - Status codes
-   - Error handling
+3. **docs/WIREFRAMES.md** ⭐ NEW
+   - Complete wireframes for all 5 screens
+   - ASCII art diagrams
+   - User flow diagrams (Mermaid)
+   - Color scheme and design system
+   - UI components specification
+   - Responsive design guidelines
+   - Accessibility considerations
+   - 658 lines, 23 KB
 
-4. **docs/ARCHITECTURE.md**
+4. **docs/API.md** ⭐ ENHANCED
+   - Complete API reference with detailed examples
+   - All endpoints documented with cURL examples
+   - Request/response examples for all operations
+   - API workflow diagrams (Mermaid)
+   - Comprehensive error handling guide
+   - Postman collection setup guide
+   - Rate limiting and versioning info
+   - 1,381 lines, 30 KB
+
+5. **docs/API_EXAMPLES.md** ⭐ NEW
+   - Code examples in 8+ programming languages:
+     * JavaScript/Node.js (Fetch & Axios)
+     * Python (requests library)
+     * PHP (cURL)
+     * Java (HttpClient)
+     * C# (.NET)
+     * Go
+     * Flutter/Dart
+     * cURL commands
+   - Complete working examples for all operations
+   - Error handling patterns
+   - Best practices guide
+   - 1,279 lines, 35 KB
+
+6. **docs/SCREENS_AND_API_DOCS.md** ⭐ NEW
+   - Summary of wireframes and API documentation
+   - Quick navigation guide
+   - Design system highlights
+   - Documentation coverage metrics
+   - Learning resources
+
+7. **docs/ARCHITECTURE.md**
    - System architecture diagrams
    - Technology stack details
    - Module structure
@@ -131,7 +166,7 @@ Warehouses:
    - Security considerations
    - Scalability planning
 
-5. **docs/USER_GUIDE.md**
+8. **docs/USER_GUIDE.md**
    - User instructions
    - Feature explanations
    - How-to guides
@@ -219,9 +254,13 @@ transportation-system/
 - **Total Lines**: ~2,500 lines of code
 
 ### Documentation
-- **Documentation Files**: 5 comprehensive documents
-- **Total Lines**: ~1,500 lines of documentation
+- **Documentation Files**: 8 comprehensive documents
+- **Wireframes & UI**: 658 lines (WIREFRAMES.md)
+- **API Reference**: 1,381 lines (API.md)
+- **Code Examples**: 1,279 lines in 8+ languages (API_EXAMPLES.md)
+- **Total Documentation Lines**: ~5,000+ lines of documentation
 - **Languages**: English + Thai (Bilingual)
+- **Code Examples**: JavaScript, Python, PHP, Java, C#, Go, Flutter/Dart, cURL
 
 ## Testing & Validation / การทดสอบและตรวจสอบ
 
