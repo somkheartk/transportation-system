@@ -293,7 +293,6 @@ Content-Type: application/json
 
 ### Need Help? / ต้องการความช่วยเหลือ?
 
-- **Email**: somkheart@example.com
 - **GitHub Issues**: https://github.com/somkheartk/transportation-system/issues
 - **Documentation**: Check the docs folder in the repository
 

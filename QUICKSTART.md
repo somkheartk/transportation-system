@@ -130,7 +130,7 @@ Use the Swagger UI at http://localhost:3000/api to:
 3. Add tracking updates using the `/shipments/{id}/tracking` PATCH endpoint
 4. Track shipments using the `/shipments/tracking/{trackingNumber}` GET endpoint
 
-Or use the provided sample data script (coming soon).
+You can also use the curl commands shown in Step 3 above to quickly create sample data.
 
 ---
 
