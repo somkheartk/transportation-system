@@ -164,19 +164,29 @@ flutter build apk --release  # Android
 flutter build ios --release  # iOS
 ```
 
-## 📖 API Documentation
+## 📖 Documentation
 
-Once the backend is running, visit the Swagger documentation at:
+### API Documentation
+
+Once the backend is running, visit the interactive Swagger documentation at:
 ```
 http://localhost:3000/api
 ```
 
-### Main Endpoints
+**Comprehensive Documentation:**
+- 📘 [**API Reference**](docs/API.md) - Complete REST API documentation with examples
+- 💻 [**API Examples**](docs/API_EXAMPLES.md) - Code examples in 8+ programming languages
+- 🎨 [**Wireframes & UI Mockups**](docs/WIREFRAMES.md) - Visual design and screen layouts
+- 🏗️ [**Architecture Guide**](docs/ARCHITECTURE.md) - System design and technical details
+- 📖 [**User Guide**](docs/USER_GUIDE.md) - How to use the system
+- ⚡ [**Quick Start**](QUICKSTART.md) - Get running in 5 minutes
+
+### Main API Endpoints
 
 #### Shipments
 - `GET /shipments` - Get all shipments
 - `GET /shipments/:id` - Get shipment by ID
-- `GET /shipments/tracking/:trackingNumber` - Track shipment
+- `GET /shipments/tracking/:trackingNumber` - Track shipment by tracking number
 - `POST /shipments` - Create new shipment
 - `PATCH /shipments/:id` - Update shipment
 - `PATCH /shipments/:id/tracking` - Add tracking update
@@ -184,35 +194,60 @@ http://localhost:3000/api
 
 #### Warehouses
 - `GET /warehouses` - Get all warehouses
-- `GET /warehouses/active` - Get active warehouses
+- `GET /warehouses/active` - Get active warehouses only
 - `GET /warehouses/:id` - Get warehouse by ID
 - `POST /warehouses` - Create new warehouse
 - `PATCH /warehouses/:id` - Update warehouse
 - `DELETE /warehouses/:id` - Delete warehouse
 
-## 🎨 Mobile App Screens
+**For detailed request/response examples, error handling, and workflows, see [API.md](docs/API.md)**
+
+## 🎨 Mobile App Screens & Wireframes
+
+**📱 View complete wireframes and UI mockups: [WIREFRAMES.md](docs/WIREFRAMES.md)**
+
+The mobile app features a modern Material Design 3 interface with:
 
 ### 1. Shipments Screen
-- View all shipments
-- Filter by status
-- Quick status indicators
-- Pull to refresh
+- View all shipments with color-coded status badges
+- Filter by status (Pending, In Transit, Delivered, Cancelled)
+- Quick status indicators (🟠 Orange, 🔵 Blue, 🟢 Green, 🔴 Red)
+- Pull to refresh functionality
+- Tap to view detailed information
 
 ### 2. Warehouses Screen
-- List all warehouses and stores
-- View warehouse details
-- Active/inactive status
+- List all warehouses, stores, and distribution centers
+- View warehouse details (address, manager, capacity)
+- Active/inactive status indicators
+- Type-specific icons (🏢 Warehouse, 🏪 Store, 🏭 Distribution Center)
 
 ### 3. Tracking Screen
-- Search by tracking number
-- View shipment details
-- Tracking history timeline
+- Search by tracking number input
+- View shipment search results
+- Recent searches history
+- Quick navigation to shipment details
+- Bilingual interface (Thai/English)
 
-### 4. Shipment Details
-- Complete shipment information
-- Sender and receiver details
-- Tracking history with timestamps
-- Status updates
+### 4. Shipment Details Screen
+- Large status indicator with color coding
+- Complete shipment information (weight, quantity, dates)
+- Sender and receiver contact cards
+- Visual timeline of tracking history
+- Timestamps and location updates
+- Scrollable content for long histories
+
+### 5. Bottom Navigation
+- Easy switching between main screens
+- Icon + label for each tab
+- Active tab highlighting
+- Material Design 3 styling
+
+**See [WIREFRAMES.md](docs/WIREFRAMES.md) for:**
+- 📐 ASCII art wireframes of all screens
+- 🎨 Color scheme and design guidelines
+- 🔄 User flow diagrams (Mermaid)
+- 📱 Responsive design guidelines
+- ♿ Accessibility considerations
 
 ## 🗄️ Database Schema
 
