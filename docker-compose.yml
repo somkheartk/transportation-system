@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: transportation-mongodb
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_DATABASE: transportation-system
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - transportation-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: transportation-backend
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/transportation-system
+      - JWT_SECRET=your-secret-key-change-this-in-production
+      - JWT_EXPIRATION=7d
+      - PORT=3000
+    depends_on:
+      - mongodb
+    networks:
+      - transportation-network
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+volumes:
+  mongodb_data:
+
+networks:
+  transportation-network:
+    driver: bridge
